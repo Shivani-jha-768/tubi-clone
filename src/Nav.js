@@ -18,6 +18,7 @@ function Nav() {
         
           className="nav__logo"
           src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Tubi_logo.svg/1200px-Tubi_logo.svg.png"
+           alt="Tubi"
         />
         <h3  className="nav__browse" style={{color:'white', paddingLeft:'50px'}}>Browse</h3>
         <div className="nav__search">
