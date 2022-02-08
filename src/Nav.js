@@ -2,34 +2,58 @@ import React, { useState, useEffect } from "react";
 import "./Nav.css";
 import { Input } from 'reactstrap';
 function Nav() {
-  const [navbarBlack, setNavbarBlack] = useState(false);
+  const [show, setShow] = useState(true)
+  const controlNavbar = () =>{
+    if (window.scrollY > 500){
+      setShow(false)
+    }else{
+      setShow(true)
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setNavbarBlack(true);
-    });
+    window.addEventListener('scroll', 
+    controlNavbar)
+  
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener('scroll', 
+      controlNavbar)
     };
   }, []);
+  
+
   return (
-    <nav className={`${navbarBlack && "nav__black"}`}>
-      <div className="nav__contents">
+   
+    <nav className={`nav__bar ${show && 'nav_black'}`}>
+      {  (show) &&
+      
+      <div className={'nav__contents'}>
+        
         <img
         
           className="nav__logo"
           src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Tubi_logo.svg/1200px-Tubi_logo.svg.png"
-           alt="Tubi"
+          alt="Tubi"
         />
+        
+        
+      
         <h3  className="nav__browse" style={{color:'white', paddingLeft:'50px'}}>Browse</h3>
+        
         <div className="nav__search">
         <Input className="inner__search" placeholder="🔍 Find movies, TV shows and more"/>
         </div>
+        
         <button className="nav__register">Register</button>
-        <h2 className="nav__login">SignIn</h2>
-
+        <h3 className="nav__login">Login</h3>
+        
+        
         
       </div>
+     
+}
     </nav>
+    
   );
 }
 
