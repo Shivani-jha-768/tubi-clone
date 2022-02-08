@@ -5,3 +5,8 @@
 .app {
   background-color: #26262d;
 }
+.solid {
+  border-top: 2px solid #bbb;
+
+  margin-left: 20px;
+}
