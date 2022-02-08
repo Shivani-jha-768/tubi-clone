@@ -15,19 +15,30 @@ function App() {
     <Banner />
     {/*banner*/}
 
+     <hr className="solid"/>
       <Row
         isLargeRow
         title="Originals"
         fetchUrl={requests.fetchNetflixOriginals}
       />
-      <Row isLargeRow title="Trending" fetchUrl={requests.fetchTrending} />
-      <Row isLargeRow title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <hr className="solid"/>
+
+      <Row isLargeRow title="Trending now" fetchUrl={requests.fetchTrending} />
+      <hr className="solid"/>
+      <Row isLargeRow title="Top Rated" fetchUrl={requests.fetchTrending} />
+      <hr className="solid"/>
       <Row isLargeRow title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <hr className="solid"/>
       <Row isLargeRow title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+      <hr className="solid"/>
       <Row isLargeRow title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <hr className="solid"/>
       <Row isLargeRow title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+      <hr className="solid"/>
       <Row isLargeRow title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <hr className="solid"/>
       <Footer/>
+      <hr className="solid"/>
 
     </div>
   );
