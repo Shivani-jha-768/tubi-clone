@@ -23,6 +23,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       <ScrollContainer className="row__posters">
         {/* <div className="row__posters"> */}
         {movies.map((movie) => (
+          <>
           <img
             
             className={`row__poster ${isLargeRow && "row__posterLarge"}`} //use && if theres no else or : otherwise use ?
@@ -31,6 +32,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
             }`}
             alt={movie.name}
           />
+          <div class="play"><img src="http://cdn1.iconfinder.com/data/icons/flavour/button_play_blue.png" alt="play"/> </div>
+          </>
         ))}
         {/* </div> */}
       </ScrollContainer>
